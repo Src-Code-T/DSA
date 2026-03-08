@@ -10,3 +10,15 @@ class Solution:
         if sum == n:
             return True
         return False
+
+'''
+class Solution:
+    def armstrongNumber (self, n):
+        s = 0
+        
+        s = sum(int(d)**3 for d in str(n))
+        
+        if s == n:
+            return True
+        return False
+'''
