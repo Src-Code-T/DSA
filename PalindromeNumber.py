@@ -1,3 +1,4 @@
+'''
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         n1 = 0
@@ -14,3 +15,17 @@ class Solution:
             return True
         else:
             return False
+'''     
+#Recursive solution
+
+class Solution:
+    def isPalindrome(self, n):
+        n = str(n)
+        
+        if len(n)<=1:
+            return True
+		    
+        if n[0] != n[-1]:
+            return False
+		    
+        return self.isPalindrome(n[1:-1])
