@@ -17,3 +17,30 @@ class Solution:
                     res.append(matrix[i][j])
                     
         return res
+    
+# Example usage:
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12]
+]
+print("Snake Pattern Row Wise:")
+solution = Solution()
+print(solution.snakePattern(matrix))
+
+#Snake Column Wise
+def snake_column(matrix):
+    rows, cols = len(matrix), len(matrix[0])
+    
+    for j in range(cols):
+        if j % 2 == 0:
+            for i in range(rows):
+                print(matrix[i][j])
+        else:
+            for i in range(rows - 1, -1, -1):
+                print(matrix[i][j])
+
+# Example usage:
+print("\nSnake Pattern Column Wise:")
+snake_column(matrix)
