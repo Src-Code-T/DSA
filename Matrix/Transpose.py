@@ -20,3 +20,10 @@ solution = Solution()
 print("Transposed Matrix:")
 print(solution.transpose(matrix))
 
+#Short-Trick
+def transpose_short_trick(mat):
+    return list(map(list, zip(*mat)))
+
+# Example usage:
+print("\nTransposed Matrix (Short Trick):")
+print(transpose_short_trick(matrix))
